@@ -59,7 +59,7 @@ function SideBar() {
     return (
         <StyledSideBar>
             <li>
-                <StyledNavLink to={"/dashboard"}>
+                <StyledNavLink to={"/appdashboard"}>
                     <HiChartPie />
                     <span>Dashboard</span>
                 </StyledNavLink>
