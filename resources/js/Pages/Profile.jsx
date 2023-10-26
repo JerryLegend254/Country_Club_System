@@ -1,8 +1,14 @@
+import AppLayout from '@/Layouts/AppLayout'
+import { Head } from '@inertiajs/react'
 import React from 'react'
 
-function Profile() {
+function Profile({auth}) {
   return (
-    <div>Profile</div>
+    <AppLayout user={auth.user}>
+      <Head title='Profile' />
+      <div>Profile</div>
+
+    </AppLayout>
   )
 }
 

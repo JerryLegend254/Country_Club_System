@@ -1,7 +1,6 @@
 import Header from '@/Components/Header';
 import SideBar from '@/Components/SideBar';
 import React from 'react'
-import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Main = styled.div`
@@ -14,12 +13,12 @@ const StyledAppLayout = styled.div`
     grid-template-rows: auto 1fr;
     height: 100vh;
 `
-function AppLayout() {
+function AppLayout({user,  children }) {
     return (
         <StyledAppLayout>
-            <Header />
             <SideBar />
-            <Main><Outlet /></Main>
+            <Header user={user} />
+            <Main>{children}</Main>
         </StyledAppLayout>
     );
 }
