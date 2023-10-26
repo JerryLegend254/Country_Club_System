@@ -1,8 +1,13 @@
+import AppLayout from '@/Layouts/AppLayout'
+import { Head } from '@inertiajs/react'
 import React from 'react'
 
-function Members() {
+function Members({auth}) {
   return (
-    <div>Members</div>
+    <AppLayout user={auth.user}>
+      <Head title='Members' />
+      <div>Members</div>
+    </AppLayout>
   )
 }
 

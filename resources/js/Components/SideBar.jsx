@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import {
     HiChartPie,
@@ -8,8 +7,10 @@ import {
     HiUserGroup,
     HiWallet,
 } from "react-icons/hi2";
+import { Link } from "@inertiajs/react";
+import Logo from "../../../public/images/logo.png"
 
-const StyledNavLink = styled(NavLink)`
+const StyledNavLink = styled(Link)`
     &:link,
     &:visited {
         display: flex;
@@ -54,37 +55,41 @@ const StyledSideBar = styled.ul`
     gap: 1rem;
     padding: 3.6rem 2.4rem;
     width: 360px;
+    grid-row: 1 / -1;
 `;
 function SideBar() {
     return (
         <StyledSideBar>
+            <div className="h-[180px] w-full flex align-center justify-center">
+                <img src={Logo} className="h-full w-[180px]" />
+            </div>
             <li>
-                <StyledNavLink to={"/appdashboard"}>
+                <StyledNavLink href={"/app"}>
                     <HiChartPie />
                     <span>Dashboard</span>
                 </StyledNavLink>
             </li>
             <li>
-                <StyledNavLink to={"/members"}>
+                <StyledNavLink href={"/members"}>
                     <HiUserGroup />
                     <span>Members</span>
                 </StyledNavLink>
             </li>
             <li>
-                <StyledNavLink to={"/payments"}>
+                <StyledNavLink href={"/payments"}>
                     <HiWallet />
                     <span>Payments</span>
                 </StyledNavLink>
             </li>
             <li>
-                <StyledNavLink to={"/profile"}>
+                <StyledNavLink href={"/profile"}>
                     {" "}
                     <HiUserCircle />
                     <span>Profile</span>
                 </StyledNavLink>
             </li>
             <li>
-                <StyledNavLink to={"/sportsplan"}>
+                <StyledNavLink href={"/sportsplan"}>
                     <HiMiniTrophy />
                     <span>Sports Plan</span>
                 </StyledNavLink>

@@ -4,11 +4,11 @@ import styled from 'styled-components'
 const StyledHeader = styled.div`
     background-color: var(--color-grey-0);
     padding: 2.4rem 1.6rem;
-    grid-column: 1 / -1;
+    text-align: end;
 `;
-function Header() {
+function Header({user}) {
   return (
-    <StyledHeader>Header</StyledHeader>
+    <StyledHeader>{user.name}</StyledHeader>
   )
 }
 

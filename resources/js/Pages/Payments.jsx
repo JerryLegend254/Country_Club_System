@@ -1,8 +1,14 @@
+import AppLayout from '@/Layouts/AppLayout'
+import { Head } from '@inertiajs/react'
 import React from 'react'
 
-function Payments() {
+function Payments({auth}) {
   return (
-    <div>Payments</div>
+    <AppLayout user={auth.user}>
+      <Head title='Payments' />
+      <div>Payments</div>
+
+    </AppLayout>
   )
 }
 

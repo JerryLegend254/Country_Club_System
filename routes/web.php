@@ -20,16 +20,33 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
 });
 
 
-
-Route::get('/admindashboard', function () {
+Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get("/app", function (){
+    return Inertia::render("AppDashboard");
+})->middleware(['auth', 'verified'])->name('app');
+
+Route::get("/members", function (){
+    return Inertia::render("Members");
+})->middleware(['auth', 'verified'])->name('members');
+
+Route::get("/profile", function (){
+    return Inertia::render("Profile");
+})->middleware(['auth', 'verified'])->name('profile');
+
+Route::get("/payments", function (){
+    return Inertia::render("Payments");
+})->middleware(['auth', 'verified'])->name('payments');
+
+Route::get("/sportsplan", function (){
+    return Inertia::render("SportsPlan");
+})->middleware(['auth', 'verified'])->name('sportsplan');
 
 
 Route::middleware('auth')->group(function () {
@@ -41,6 +58,3 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::fallback(function (){
-    return Inertia::render("Dashboard");
-});

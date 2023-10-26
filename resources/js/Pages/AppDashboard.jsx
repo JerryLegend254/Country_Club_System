@@ -2,13 +2,13 @@ import AppLayout from '@/Layouts/AppLayout'
 import { Head } from '@inertiajs/react'
 import React from 'react'
 
-function SportsPlan({auth}) {
+function AppDashboard({auth}) {
   return (
     <AppLayout user={auth.user}>
-      <Head title='Sports Plan' />
-      <div>SportsPlan</div>
+      <Head title='Dashboard' />
+      <div>AppDashboard</div>
     </AppLayout>
   )
 }
 
-export default SportsPlan
+export default AppDashboard
