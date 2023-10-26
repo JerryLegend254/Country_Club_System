@@ -7,7 +7,7 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import AppLayout from "./Layouts/AppLayout";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import HomeScreen from "./Pages/Home/HomeScreen";
-import DashBoard from "./Pages/DashBoard";
+// import DashBoard from "./Pages/DashBoard";
 import Members from "./Pages/Members";
 import Payments from "./Pages/Payments";
 import SportsPlan from "./Pages/SportsPlan";
@@ -37,9 +37,9 @@ createInertiaApp({
                     >
                         <Route
                             index
-                            element={<Navigate replace to="/dashboard" />}
+                            element={<Navigate replace to="/members" />}
                         />
-                        <Route path="/dashboard" element={<DashBoard />} />
+                        {/* <Route path="/dashboard" element={<DashBoard />} /> */}
                         <Route path="/members" element={<Members />} />
                         <Route path="/payments" element={<Payments />} />
                         <Route path="/sportsplan" element={<SportsPlan />} />

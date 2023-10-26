@@ -58,12 +58,12 @@ const StyledSideBar = styled.ul`
 function SideBar() {
     return (
         <StyledSideBar>
-            <li>
+            {/* <li>
                 <StyledNavLink to={"/dashboard"}>
                     <HiChartPie />
                     <span>Dashboard</span>
                 </StyledNavLink>
-            </li>
+            </li> */}
             <li>
                 <StyledNavLink to={"/members"}>
                     <HiUserGroup />
